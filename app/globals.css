@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* Basic typography: one system sans-serif, a readable body size and a
+   simple heading scale. Everything else is left to be designed. */
+@layer base {
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Helvetica Neue",
+      Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
