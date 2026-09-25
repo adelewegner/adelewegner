@@ -4,7 +4,7 @@
    simple heading scale. Everything else is left to be designed. */
 @layer base {
   body {
-    background-color: #ffffff;
+    background-color: #f7e8d3;
     color: #000000;
     font-family: ui-sans-serif, system-ui, -apple-system, "Helvetica Neue",
       Arial, sans-serif;
