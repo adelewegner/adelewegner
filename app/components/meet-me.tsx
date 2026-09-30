@@ -70,7 +70,7 @@ export default function MeetMe() {
         </div>
 
         <div className="relative grid md:grid-cols-[1fr_450px]">
-          <div className="relative z-10 px-6 pt-28 pb-10 text-center text-white md:px-12 md:pt-[245px] md:pb-16">
+          <div className="relative z-10 px-6 pt-24 pb-10 text-center text-white md:px-12 md:pt-[190px] md:pb-16">
             <p className="text-[20px] tracking-[0.18em] md:text-[25px]">
               Adele Odderskov Wegner
             </p>
