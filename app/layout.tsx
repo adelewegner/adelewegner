@@ -18,7 +18,7 @@ const serif = Libre_Caslon_Text({
 });
 
 export const metadata: Metadata = {
-  title: "Adele O. Wegner",
+  title: "Adele Odderskov Wegner",
   description:
     "Masters student at IT-university of copenhagen, with passion for UX-research, Interaction design and creative data dissemination.",
 };

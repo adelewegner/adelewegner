@@ -12,8 +12,8 @@ export default function Home() {
         Open for work - Copenhagen
       </p>
 
-      <h1 className="mt-12 font-display text-[clamp(3.5rem,10vw,8.25rem)] font-black leading-none [font-stretch:75%] sm:mt-24">
-        Adele O. Wegner
+      <h1 className="mt-12 font-display text-[clamp(2.5rem,7.5vw,6.75rem)] font-black leading-none [font-stretch:75%] sm:mt-24">
+        Adele Odderskov Wegner
       </h1>
 
       <p className="mt-8 max-w-[960px] text-[20px] leading-[1.6] sm:mt-9 sm:text-[29px]">
