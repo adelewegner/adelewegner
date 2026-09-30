@@ -1,19 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
 
-// The home button: the orange starflower in the top-left corner. It spins
-// slowly only while the mouse is on it. Pausing the animation rather than
-// removing it means the flower stops where it is instead of snapping back.
-export default function HomeLink({ href = "/" }: { href?: string }) {
+// The home button: the black flower in the top-left corner, on every page.
+// It turns slowly all the time and holds still while the mouse is on it.
+// Pausing rather than removing the animation keeps it where it stopped.
+export default function HomeLink() {
   return (
-    <Link href={href} aria-label="Home" className="group block w-fit shrink-0">
+    <Link href="/" aria-label="Home" className="absolute left-4 top-4 z-50 block sm:left-10 sm:top-14">
       <Image
-        src="/starflower.svg"
+        src="/blackflower.svg"
         alt=""
-        width={90}
-        height={84}
+        width={160}
+        height={160}
         priority
-        className="animate-[spin_12s_linear_infinite] [animation-play-state:paused] group-hover:[animation-play-state:running] motion-reduce:animate-none"
+        className="h-20 w-20 sm:h-40 sm:w-40 animate-[spin_20s_linear_infinite] hover:[animation-play-state:paused] motion-reduce:animate-none"
       />
     </Link>
   );

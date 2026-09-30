@@ -1,8 +1,6 @@
 # Portfolio
 
-A Next.js site with a front page of projects, an art page, an about page,
-one article page per project (`app/projects/<slug>`) and one page per artwork
-(`public/gallery/<slug>`).
+A Next.js site. Right now it is one empty page with a cream background.
 
 ## Run it locally
 

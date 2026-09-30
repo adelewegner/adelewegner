@@ -1,35 +1,18 @@
 @import "tailwindcss";
 
-/* Basic typography: one system sans-serif, a readable body size and a
-   simple heading scale. Everything else is left to be designed. */
+@theme inline {
+  --color-cream: #f7f1dd;
+  --color-available: #82dd4a;
+  /* Skia is a Mac system font, so it is only there on Macs and iPhones.
+     Everyone else gets Bricolage Grotesque as the nearest stand-in. */
+  --font-display: Skia, var(--font-display-face);
+  --font-serif: var(--font-serif-face);
+}
+
 @layer base {
   body {
-    background-color: #f7e8d3;
+    background-color: var(--color-cream);
     color: #000000;
-    font-family: ui-sans-serif, system-ui, -apple-system, "Helvetica Neue",
-      Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
-  h1 {
-    font-size: 2rem;
-    line-height: 1.2;
-    font-weight: 600;
-  }
-
-  h2 {
-    font-size: 1.25rem;
-    line-height: 1.3;
-    font-weight: 600;
-  }
-
-  h3 {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-
-  a {
-    text-decoration: underline;
+    font-family: var(--font-serif), Georgia, serif;
   }
 }
