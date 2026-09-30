@@ -27,7 +27,7 @@ export default function Home() {
         <PillButton href="/artwork">View my artwork</PillButton>
       </div>
 
-      <div className="mt-16 w-full text-left sm:mt-20">
+      <div className="mt-24 w-full text-left sm:mt-36">
         <MeetMe />
       </div>
     </main>

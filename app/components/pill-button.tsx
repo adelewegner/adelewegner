@@ -11,7 +11,7 @@ export default function PillButton({
   return (
     <Link
       href={href}
-      className="flex h-16 w-full max-w-[364px] items-center justify-center whitespace-nowrap rounded-full bg-black px-6 text-[20px] font-bold text-cream sm:h-[92px] sm:w-auto sm:min-w-[364px] sm:max-w-none sm:text-[24px]"
+      className="flex h-16 w-full max-w-[364px] items-center justify-center whitespace-nowrap rounded-full bg-black px-6 text-[20px] font-bold text-cream transition-colors duration-200 hover:bg-[#ff7eb6] hover:text-black sm:h-[92px] sm:w-auto sm:min-w-[364px] sm:max-w-none sm:text-[24px]"
     >
       {children}
     </Link>

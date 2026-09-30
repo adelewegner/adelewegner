@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Libre_Caslon_Text } from "next/font/google";
 import HomeLink from "@/app/components/home-link";
+import HeartCursor from "@/app/components/heart-cursor";
 import "./globals.css";
 
 // Fallback for the big name on devices without Skia (see globals.css).
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body className="relative antialiased">
         <HomeLink />
         {children}
+        <HeartCursor />
       </body>
     </html>
   );
