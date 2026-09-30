@@ -1,8 +1,9 @@
 import PillButton from "@/app/components/pill-button";
+import MeetMe from "@/app/components/meet-me";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center px-4 pt-32 pb-20 text-center sm:pt-[155px]">
+    <main className="flex min-h-screen flex-col items-center px-4 pt-28 pb-20 text-center sm:pt-[100px]">
       <p className="flex items-center gap-3 whitespace-nowrap text-[13px] uppercase sm:gap-6 tracking-[0.12em] sm:text-[20px]">
         <span
           aria-hidden
@@ -24,6 +25,10 @@ export default function Home() {
       <div className="mt-10 flex w-full flex-col items-center justify-center gap-4 sm:mt-10 sm:flex-row sm:gap-11">
         <PillButton href="/projects">View my design projects</PillButton>
         <PillButton href="/artwork">View my artwork</PillButton>
+      </div>
+
+      <div className="mt-16 w-full text-left sm:mt-20">
+        <MeetMe />
       </div>
     </main>
   );
