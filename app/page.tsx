@@ -55,11 +55,23 @@ export default function Home() {
           {PROJECTS.map((project, index) => {
             const tile = (
               <>
-                {/* No project has a picture yet, so every square is a purple
-                    "under construction" tile for now. */}
-                <div className="flex aspect-[179/136] items-center justify-center bg-purple text-[clamp(10px,1.05vw,16px)] tracking-[0.12em] text-lime uppercase">
-                  Under construction
-                </div>
+                {project.image ? (
+                  <div className="relative aspect-[179/136] overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.title ?? ""}
+                      fill
+                      sizes="(max-width: 640px) 90vw, 30vw"
+                      className={`object-cover ${
+                        project.imagePosition ?? "object-[center_40%]"
+                      }`}
+                    />
+                  </div>
+                ) : (
+                  <div className="flex aspect-[179/136] items-center justify-center bg-purple text-[clamp(10px,1.05vw,16px)] tracking-[0.12em] text-lime uppercase">
+                    Under construction
+                  </div>
+                )}
                 {project.title && (
                   <h2 className="mt-[1.2em] text-[clamp(16px,1.7vw,26px)] leading-tight font-bold">
                     {project.title}
