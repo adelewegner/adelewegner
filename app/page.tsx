@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-// The front page: a lime band with the portrait and the title, then a purple
+// The front page: a purple band with the portrait and the title, then a lime
 // area holding the project grid. The grid is placeholders for now, nine grey
 // tiles in rows of three. Sizes are in vw so the page keeps the proportions
 // of the design at any width, with clamps to stop text getting too small on
@@ -9,8 +9,8 @@ const PLACEHOLDER_TILES = 9;
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-purple">
-      <header className="relative h-[clamp(240px,39vw,600px)] overflow-hidden bg-lime">
+    <main className="min-h-screen bg-lime">
+      <header className="relative h-[clamp(240px,39vw,600px)] overflow-hidden bg-purple text-lime">
         <div className="absolute bottom-0 left-[3%] aspect-[1048/1128] h-[88%] sm:left-[15%]">
           <Image
             src="/adele-portrait.png"
@@ -40,7 +40,7 @@ export default function Home() {
         className="mx-auto max-w-[1600px] px-[5.5vw] pt-[4vw] pb-[20vw]"
       >
         {/* Centred over the grid below it. */}
-        <p className="flex items-center justify-center gap-[1em] text-[clamp(10px,1.4vw,20px)] tracking-[0.12em] text-cream uppercase">
+        <p className="flex items-center justify-center gap-[1em] text-[clamp(10px,1.4vw,20px)] tracking-[0.12em] text-purple uppercase">
           <span
             aria-hidden
             className="h-[2em] w-[2em] shrink-0 rounded-full bg-[#82dd4a]"
