@@ -1,5 +1,4 @@
 import Image from "next/image";
-import PortraitSparkles from "@/app/components/portrait-sparkles";
 
 // The front page: a lime band with the portrait and the title, then a purple
 // area holding the project grid. The grid is placeholders for now, nine grey
@@ -21,7 +20,6 @@ export default function Home() {
             sizes="(max-width: 640px) 45vw, 34vw"
             className="object-contain object-bottom"
           />
-          <PortraitSparkles />
         </div>
 
         <div className="absolute top-[20%] right-[calc(max(0px,(100%-1600px)/2)+5.5vw)] text-right">
