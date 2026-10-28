@@ -22,14 +22,14 @@ export default function Home() {
           />
         </div>
 
-        <div className="absolute top-[20%] right-[calc(max(0px,(100%-1600px)/2)+5.5vw)] text-right">
-          <p className="text-[clamp(15px,3.75vw,54px)] leading-tight">
+        <div className="absolute top-[16%] right-[calc(max(0px,(100%-1600px)/2)+5.5vw)] text-right">
+          <p className="text-[clamp(14px,3.15vw,50px)] leading-tight">
             Adele Odderskov Wegner
           </p>
-          <p className="mt-[0.3em] text-[clamp(9px,2.35vw,34px)] tracking-[0.02em] uppercase">
+          <p className="mt-[0.35em] text-[clamp(9px,2vw,32px)] tracking-[0.04em] uppercase">
             UX · Communication · Co-design
           </p>
-          <h1 className="mt-[0.15em] text-[clamp(38px,8.5vw,122px)] leading-none italic">
+          <h1 className="mt-[0.25em] text-[clamp(40px,10.6vw,170px)] leading-none italic">
             Portfolio
           </h1>
         </div>
