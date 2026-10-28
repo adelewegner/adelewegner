@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Libre_Caslon_Text } from "next/font/google";
-import HomeLink from "@/app/components/home-link";
 import HeartCursor from "@/app/components/heart-cursor";
 import "./globals.css";
 
@@ -11,10 +10,11 @@ const display = Bricolage_Grotesque({
   variable: "--font-display-face",
 });
 
-// The serif for everything else: the status line, the intro and the buttons.
+// The serif for everything else, upright and italic.
 const serif = Libre_Caslon_Text({
   subsets: ["latin"],
   weight: ["400", "700"],
+  style: ["normal", "italic"],
   variable: "--font-serif-face",
 });
 
@@ -32,7 +32,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${display.variable} ${serif.variable}`}>
       <body className="relative antialiased">
-        <HomeLink />
         {children}
         <HeartCursor />
       </body>

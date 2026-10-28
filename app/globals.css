@@ -2,11 +2,34 @@
 
 @theme inline {
   --color-cream: #f7f1dd;
-  --color-available: #82dd4a;
+  --color-lime: #def26e;
+  --color-purple: #3a1f49;
   /* Skia is a Mac system font, so it is only there on Macs and iPhones.
      Everyone else gets Bricolage Grotesque as the nearest stand-in. */
   --font-display: Skia, var(--font-display-face);
   --font-serif: var(--font-serif-face);
+}
+
+/* One light from PortraitSparkles: it pops up, drifts out along --dx/--dy
+   and shrinks away to nothing. */
+@keyframes sparkle-poof {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(
+        calc(-50% + var(--dx) * 0.25),
+        calc(-50% + var(--dy) * 0.25)
+      )
+      scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy)))
+      scale(0);
+    opacity: 0;
+  }
 }
 
 @layer base {
