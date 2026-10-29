@@ -73,6 +73,16 @@ export const PROJECTS: Project[] = [
   },
 ];
 
+// Projects with a full write-up in their own folder under
+// app/(inner)/projects, in front-page order. The rest use the general
+// [slug] page.
+export const OWN_PAGES = PROJECTS.map((project) => project.slug).filter(
+  (slug): slug is string =>
+    slug === "news-for-a-digital-generation" ||
+    slug === "smartwatch-in-everyday-life" ||
+    slug === "eventful",
+);
+
 export function getProject(slug: string) {
   return PROJECTS.find((project) => project.slug === slug);
 }

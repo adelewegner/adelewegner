@@ -1,22 +1,16 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { PROJECTS, getProject } from "@/lib/projects";
+import { OWN_PAGES, PROJECTS, getProject } from "@/lib/projects";
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
 }
 
-// Projects that have their own page in a folder beside this one, so this
-// general page must not claim their address too.
-const OWN_PAGES = new Set([
-  "smartwatch-in-everyday-life",
-  "news-for-a-digital-generation",
-  "eventful",
-]);
-
+// Projects with their own page (OWN_PAGES) are left out, so this general
+// page doesn't claim their address too.
 export function generateStaticParams() {
   return PROJECTS.filter(
-    (project) => project.slug && !OWN_PAGES.has(project.slug),
+    (project) => project.slug && !OWN_PAGES.includes(project.slug),
   ).map((project) => ({ slug: project.slug! }));
 }
 

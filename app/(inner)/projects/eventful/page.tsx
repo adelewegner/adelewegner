@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import NextProject from "@/app/components/next-project";
 import ProjectSection, {
   BulletList,
   SectionHeading,
@@ -167,6 +168,7 @@ export default function EventfulProject() {
           problem is understood.
         </p>
       </InPractice>
+      <NextProject current="eventful" />
 
       <section
         aria-labelledby="references"

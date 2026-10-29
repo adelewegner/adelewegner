@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import NextProject from "@/app/components/next-project";
 import ProjectSection, {
   BulletList,
   SectionHeading,
@@ -135,6 +136,7 @@ export default function BaThesisProject() {
           in mind the trade-off of building on platforms you don&rsquo;t own.
         </p>
       </InPractice>
+      <NextProject current="news-for-a-digital-generation" />
 
       <section
         aria-labelledby="references"

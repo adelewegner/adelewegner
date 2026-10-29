@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import NextProject from "@/app/components/next-project";
 import ProjectSection, {
   BulletList,
   SectionHeading,
@@ -139,6 +140,7 @@ export default function SmartwatchProject() {
           that asks people to track or measure themselves.
         </p>
       </InPractice>
+      <NextProject current="smartwatch-in-everyday-life" />
 
       <section
         aria-labelledby="references"
