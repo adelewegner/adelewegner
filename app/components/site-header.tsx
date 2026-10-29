@@ -29,10 +29,10 @@ export default function SiteHeader() {
           </div>
         </div>
 
-        {/* An outlined pill that tips over and fills pink on hover. */}
+        {/* An outlined pill that fills pink on hover. */}
         <Link
           href="/"
-          className="mt-[3vw] inline-flex h-[1.85em] items-center gap-[0.5em] rounded-full border-2 border-lime px-[1.1em] text-[clamp(11px,1.3vw,22px)] lowercase transition duration-200 hover:-rotate-3 hover:border-[#ff7eb6] hover:bg-[#ff7eb6] hover:text-purple motion-reduce:transition-none"
+          className="mt-[3vw] inline-flex h-[1.85em] items-center gap-[0.5em] rounded-full border-2 border-lime px-[1.1em] text-[clamp(11px,1.3vw,22px)] lowercase transition-colors duration-200 hover:border-[#ff7eb6] hover:bg-[#ff7eb6] hover:text-purple motion-reduce:transition-none"
         >
           <span aria-hidden>←</span>
           back
