@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Libre_Caslon_Text } from "next/font/google";
+import {
+  Bricolage_Grotesque,
+  Kalam,
+  Libre_Caslon_Text,
+} from "next/font/google";
 import HeartCursor from "@/app/components/heart-cursor";
 import "./globals.css";
 
@@ -25,6 +29,13 @@ const DESCRIPTION =
 // LinkedIn. public/og-image.png is the name, tagline and "Portfolio" in
 // lime on the purple of the front page, at 1200×627, the size LinkedIn and
 // others expect.
+// Handwriting, for the notes scribbled around the photo on Meet Adele.
+const hand = Kalam({
+  subsets: ["latin"],
+  weight: ["300", "400"],
+  variable: "--font-hand-face",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.adelewegner.com"),
   title: "Adele Odderskov Wegner",
@@ -53,7 +64,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${display.variable} ${serif.variable}`}>
+    <html
+      lang="en"
+      className={`${display.variable} ${serif.variable} ${hand.variable}`}
+    >
       <body className="relative antialiased">
         {children}
         <HeartCursor />
