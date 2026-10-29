@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ProjectSection, {
   BulletList,
   SectionHeading,
+  InPractice,
 } from "@/app/components/project-section";
 
 export const metadata: Metadata = {
@@ -120,6 +121,20 @@ export default function BaThesisProject() {
           Instagram would be as much of a problem as staying.
         </p>
       </ProjectSection>
+
+      <InPractice>
+        <p>
+          From the thesis I bring a way of reading content strategically:
+          counting and coding what an organisation actually publishes, and
+          holding it up against what it says it wants to achieve.
+        </p>
+        <p>
+          At work, I can use that to audit a company&rsquo;s social media,
+          spot the gaps between strategy and output, and suggest content that
+          fits both the platform and the brand&rsquo;s purpose, while keeping
+          in mind the trade-off of building on platforms you don&rsquo;t own.
+        </p>
+      </InPractice>
 
       <section
         aria-labelledby="references"

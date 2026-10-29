@@ -68,3 +68,19 @@ export function BulletList({ items }: { items: ReactNode[] }) {
     </ul>
   );
 }
+
+// The closing box on each project page: how what the project taught can be
+// used at work. Purple with lime text, like the header, so it stands out
+// from the sections above it.
+export function InPractice({ children }: { children: ReactNode }) {
+  return (
+    <section className="my-[4vw] grid gap-x-[5vw] gap-y-4 bg-purple p-[clamp(24px,3.5vw,56px)] text-lime md:grid-cols-[1fr_2fr]">
+      <h2 className="text-[clamp(26px,2.6vw,42px)] leading-tight">
+        How I use this in practice
+      </h2>
+      <div className="space-y-5 text-[clamp(15px,1.25vw,19px)] leading-[1.7]">
+        {children}
+      </div>
+    </section>
+  );
+}

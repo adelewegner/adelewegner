@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ProjectSection, {
   BulletList,
   SectionHeading,
+  InPractice,
 } from "@/app/components/project-section";
 
 export const metadata: Metadata = {
@@ -151,6 +152,21 @@ export default function EventfulProject() {
           a much larger group.
         </p>
       </ProjectSection>
+
+      <InPractice>
+        <p>
+          Eventful gave me hands-on experience of the whole design process,
+          from interviews and personas to prototypes, user tests and a second
+          iteration.
+        </p>
+        <p>
+          At work, it means I can take a vague idea, test the assumptions
+          behind it early, and let users&rsquo; feedback shape the product
+          rather than my own preferences. And I know to keep the early phases
+          open long enough that the solution isn&rsquo;t decided before the
+          problem is understood.
+        </p>
+      </InPractice>
 
       <section
         aria-labelledby="references"

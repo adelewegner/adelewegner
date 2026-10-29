@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ProjectSection, {
   BulletList,
   SectionHeading,
+  InPractice,
 } from "@/app/components/project-section";
 
 export const metadata: Metadata = {
@@ -124,6 +125,20 @@ export default function SmartwatchProject() {
           the user or the data?
         </p>
       </ProjectSection>
+
+      <InPractice>
+        <p>
+          This project taught me to look past what a design is meant to do and
+          study what it actually does in people&rsquo;s everyday lives. At
+          work, I use diary studies and follow-up interviews to get close to
+          how users feel about a product over time, not just in a single test.
+        </p>
+        <p>
+          It also made me alert to how nudges, notifications and numbers can
+          motivate one user and stress another. I bring that into any design
+          that asks people to track or measure themselves.
+        </p>
+      </InPractice>
 
       <section
         aria-labelledby="references"
