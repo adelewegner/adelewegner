@@ -57,20 +57,24 @@ const EXPERIENCE: Entry[] = [
     ],
   },
   {
-    title: "A. Enggaard, Receptionist – full-time",
-    period: "August 2021 – February 2022",
-    points: [
-      "As receptionist at A. Enggaard I handled practical and administrative tasks, kept the office running smoothly day to day, and helped provide good service to colleagues and guests alike.",
-    ],
-  },
-];
-
-const OTHER_EXPERIENCE: Entry[] = [
-  {
     title: "(Volunteer) Layout Designer, SAMSON media magazine",
     period: "September 2023 – September 2024",
     points: [
       "Layout design for a printed magazine in Adobe InDesign, visual communication.",
+    ],
+  },
+  {
+    title: "(Volunteer) Member, Board of Studies, Aarhus University",
+    period: "October 2022 – October 2023",
+    points: [
+      "Representing students in decisions on the degree programme, from course evaluations to changes in the curriculum.",
+    ],
+  },
+  {
+    title: "A. Enggaard, Office Junior (Piccoline) – full-time",
+    period: "August 2021 – February 2022",
+    points: [
+      "As office junior at A. Enggaard I handled practical and administrative tasks, kept the office running smoothly day to day, and helped provide good service to colleagues and guests alike.",
     ],
   },
   {
@@ -83,9 +87,9 @@ const OTHER_EXPERIENCE: Entry[] = [
 const PROFILE = [
   "Dreaming of having a professional marathon runner on the team? Then it's not me. On the other hand, I'm almost a professional at walking into a room with good energy and creating a great atmosphere.",
   "I hold a bachelor's degree in Media Studies with a minor in Humanistic Technology Development from Aarhus University, and I'm now doing my master's in Digital Design and Interactive Technologies at the IT University of Copenhagen.",
-  "I'm fascinated by why people do what they do. I'm extremely curious and love learning new things.",
-  "I dream of working on digital projects in culture, media and brands, where technology and creativity meet.",
-  "In my free time I'm social, build Lego, listen to lots of music and draw on my iPad, where I love to experiment visually.",
+  "I'm fascinated by why people do what they do, and I love turning that curiosity into insight through interviews, observation and user testing.",
+  "I want to work with UX research and digital design: helping teams understand their users, and turning that understanding into products and communication that work. I'm especially drawn to culture, media and brands, where technology and creativity meet.",
+  "Outside work, I like to move my body, build Lego, listen to a lot of music and draw on my iPad, where I love to experiment visually.",
 ];
 
 const SKILLS = [
@@ -190,13 +194,8 @@ export default function CvPage() {
               <EntryBlock key={entry.title} entry={entry} />
             ))}
           </Section>
-          <Section title="Relevant experience">
+          <Section title="Experience">
             {EXPERIENCE.map((entry) => (
-              <EntryBlock key={entry.title} entry={entry} />
-            ))}
-          </Section>
-          <Section title="Other experience">
-            {OTHER_EXPERIENCE.map((entry) => (
               <EntryBlock key={entry.title} entry={entry} />
             ))}
           </Section>
