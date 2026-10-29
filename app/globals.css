@@ -11,6 +11,17 @@
 }
 
 @layer base {
+  /* A plain pink arrow, a little bigger than the usual one, everywhere on the
+     site, links and buttons included. The point of the arrow (4, 3) is
+     where it clicks. Browsers that can't show it fall back to their own. */
+  html,
+  a,
+  button {
+    cursor:
+      url("/cursor.svg") 4 3,
+      auto;
+  }
+
   body {
     background-color: var(--color-cream);
     color: #000000;

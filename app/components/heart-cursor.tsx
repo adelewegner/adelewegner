@@ -8,7 +8,7 @@ import { useEffect, useRef } from "react";
 // of the pointer so it never covers what you are pointing at, hides when the
 // mouse leaves the window, and is left out on touch screens, which have no
 // pointer to follow.
-const OFFSET = 14; // px down and to the right of the pointer
+const OFFSET = 24; // px down and to the right of the pointer, clear of the arrow
 const EASE = 0.2; // how much of the remaining distance it covers each frame
 
 export default function HeartCursor() {
