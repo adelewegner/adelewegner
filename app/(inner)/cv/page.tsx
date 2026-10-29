@@ -183,7 +183,20 @@ export default function CvPage() {
               adew@itu.dk
             </a>
           </p>
-          <p>Copenhagen</p>
+          <p>
+            {/* A map pin: a teardrop with a round hole in it. */}
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden
+              className="mr-[0.3em] inline-block h-[1em] w-auto align-[-0.15em]"
+            >
+              <path
+                fillRule="evenodd"
+                d="M12 1.5a7.5 7.5 0 0 0-7.5 7.5c0 5.4 7.5 13.5 7.5 13.5s7.5-8.1 7.5-13.5A7.5 7.5 0 0 0 12 1.5Zm0 4.5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Z"
+              />
+            </svg>
+            Copenhagen
+          </p>
         </div>
       </header>
 
