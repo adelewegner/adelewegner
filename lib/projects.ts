@@ -15,7 +15,7 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     slug: "1000-rejections",
-    title: "1000 Rejections",
+    title: "Challenge: 1000 rejections",
     subtitle: "Creative Coding · Creative Data Visualization · Personal Data",
   },
   {

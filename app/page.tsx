@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import NavPills from "@/app/components/nav-pills";
+import SiteFooter from "@/app/components/site-footer";
 import { PROJECTS } from "@/lib/projects";
 
 // The front page: a purple band with the portrait and the title, then a lime
@@ -38,9 +39,30 @@ export default function Home() {
         </div>
       </header>
 
+      {/* "Meet Adele", sitting across the bottom edge of the purple band,
+          centred under "Portfolio" (half the word's width is about 2.05
+          times its font size, which is clamp(40px,10.6vw,170px)). Styled like the project
+          squares' hover: a pink pill with a thin purple outline and a solid
+          purple block shadow, plus a purple circle with a lime arrow. On
+          hover it lifts a little further. */}
+      <div className="relative z-10 h-0">
+        <Link
+          href="/about"
+          className="absolute top-0 right-[calc(max(0px,(100%-1600px)/2)+5.5vw+clamp(82px,21.7vw,348px))] flex h-[2.4em] translate-x-1/2 -translate-y-1/2 items-center gap-[0.6em] rounded-full border-2 border-purple bg-[#ff7eb6] pr-[0.3em] pl-[1.2em] text-[clamp(14px,1.5vw,23px)] text-purple shadow-[3px_3px_0_#3a1f49] transition duration-200 ease-out hover:translate-x-[calc(50%-2px)] hover:-translate-y-[calc(50%+2px)] hover:shadow-[5px_5px_0_#3a1f49] motion-reduce:transition-none"
+        >
+          Meet Adele
+          <span
+            aria-hidden
+            className="flex size-[1.65em] items-center justify-center rounded-full bg-purple text-lime"
+          >
+            &rarr;
+          </span>
+        </Link>
+      </div>
+
       <section
         aria-label="Projects"
-        className="mx-auto max-w-[1600px] px-[5.5vw] pt-[4vw] pb-[20vw]"
+        className="mx-auto max-w-[1600px] px-[5.5vw] pt-[max(4vw,48px)] pb-[10vw]"
       >
         {/* Centred over the grid below it. */}
         <p className="flex items-center justify-center gap-[1em] text-[clamp(9px,1.05vw,15px)] tracking-[0.12em] text-purple uppercase">
@@ -104,6 +126,8 @@ export default function Home() {
           })}
         </div>
       </section>
+
+      <SiteFooter />
     </main>
   );
 }

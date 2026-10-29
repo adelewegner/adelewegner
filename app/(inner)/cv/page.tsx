@@ -162,6 +162,12 @@ export default function CvPage() {
         </div>
         <div className="text-[15px] sm:text-right">
           <p>
+            Phone:{" "}
+            <a href="tel:+4542603012" className="underline">
+              +45 42603012
+            </a>
+          </p>
+          <p>
             Private email:{" "}
             <a href="mailto:adeleodderskov@gmail.com" className="underline">
               adeleodderskov@gmail.com
