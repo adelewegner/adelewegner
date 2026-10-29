@@ -40,18 +40,22 @@ export default function EventfulProject() {
         <h1 className="text-[clamp(28px,3.2vw,52px)] leading-tight">
           Eventful: a UX project at Aarhus University
         </h1>
+        <SectionHeading>Design concept</SectionHeading>
         <p>
-          There is always something happening in Aarhus, but the information is
-          scattered across social media, websites and posters on the street.
-          Together with a fellow student, I designed Eventful, an app that
-          gathers the city&rsquo;s events in one place and lets you filter
-          them by budget, time, place and interests.
+          There&rsquo;s always something happening in Aarhus, but finding it
+          means checking Instagram, websites, posters on the street and what
+          friends happen to mention.
         </p>
         <p>
-          Our starting hypothesis was that people in Aarhus lack one place for
-          events and would use it if it existed. To test it, we followed the
-          design thinking process from interviews to tested prototype
-          (IDEO.org, n.d.).
+          Together with a fellow student, I saw a chance to gather it all in
+          one place, and to make deciding what to do feel less like searching
+          and more like play.
+        </p>
+        <p>
+          We ended up designing Eventful, an app that collects the city&rsquo;s
+          events and lets you filter them by budget, time, place and
+          interests. Can&rsquo;t decide? Tell it what mood you&rsquo;re in, or
+          spin the wheel for a random plan.
         </p>
       </ProjectSection>
 
@@ -66,6 +70,12 @@ export default function EventfulProject() {
         }}
       >
         <SectionHeading>Research and first prototype</SectionHeading>
+        <p>
+          Our starting hypothesis was that people in Aarhus lack one place for
+          events and would use it if it existed. To test it, we followed the
+          design thinking process from interviews to tested prototype
+          (IDEO.org, n.d.).
+        </p>
         <p>
           Semi-structured interviews (Tracy, 2025) quickly overturned our
           first assumption: hardly anyone found events on Facebook. People
@@ -126,7 +136,7 @@ export default function EventfulProject() {
             "“Spin and find”: choose a date, budget and category, then spin for a random activity. From the prototype, in Danish.",
         }}
       >
-        <SectionHeading>Reflection</SectionHeading>
+        <SectionHeading>Learnings</SectionHeading>
         <p>
           Looking back, the strength of the project was how closely we
           involved the users. By testing, listening and daring to go back when
