@@ -55,25 +55,31 @@ export default function Home() {
           {PROJECTS.map((project, index) => {
             const tile = (
               <>
-                {project.image ? (
-                  <div className="relative aspect-[179/136] overflow-hidden">
-                    <Image
-                      src={project.image}
-                      alt={project.title ?? ""}
-                      fill
-                      sizes="(max-width: 640px) 90vw, 30vw"
-                      className={`object-cover ${
-                        project.imagePosition ?? "object-[center_40%]"
-                      }`}
-                    />
-                  </div>
-                ) : (
-                  <div className="flex aspect-[179/136] items-center justify-center bg-purple text-[clamp(10px,1.05vw,16px)] tracking-[0.12em] text-lime uppercase">
-                    Under construction
-                  </div>
-                )}
+                {/* On hover the picture lifts like a printed card off the
+                    page, a solid pink block appears behind it as its shadow,
+                    the picture inside zooms in a touch, and the title turns
+                    italic like "Portfolio" in the header. */}
+                <div className="relative transition duration-300 ease-out group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:shadow-[12px_12px_0_#ff7eb6] group-focus-visible:-translate-x-2 group-focus-visible:-translate-y-2 group-focus-visible:shadow-[12px_12px_0_#ff7eb6] motion-reduce:transition-none">
+                  {project.image ? (
+                    <div className="relative aspect-[179/136] overflow-hidden">
+                      <Image
+                        src={project.image}
+                        alt={project.title ?? ""}
+                        fill
+                        sizes="(max-width: 640px) 90vw, 30vw"
+                        className={`object-cover transition-transform duration-500 ease-out group-hover:scale-105 motion-reduce:transition-none ${
+                          project.imagePosition ?? "object-[center_40%]"
+                        }`}
+                      />
+                    </div>
+                  ) : (
+                    <div className="flex aspect-[179/136] items-center justify-center overflow-hidden bg-purple text-[clamp(10px,1.05vw,16px)] tracking-[0.12em] text-lime uppercase">
+                      Under construction
+                    </div>
+                  )}
+                </div>
                 {project.title && (
-                  <h2 className="mt-[1.2em] text-[clamp(16px,1.7vw,26px)] leading-tight font-bold">
+                  <h2 className="mt-[1.2em] text-[clamp(16px,1.7vw,26px)] leading-tight font-bold group-hover:italic group-focus-visible:italic">
                     {project.title}
                   </h2>
                 )}
@@ -87,7 +93,7 @@ export default function Home() {
             return (
               <article key={index} className="text-center text-purple">
                 {project.slug ? (
-                  <Link href={`/projects/${project.slug}`} className="block">
+                  <Link href={`/projects/${project.slug}`} className="group block">
                     {tile}
                   </Link>
                 ) : (
