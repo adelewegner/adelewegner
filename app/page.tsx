@@ -57,8 +57,8 @@ export default function Home() {
               <>
                 {/* On hover the picture lifts like a printed card off the
                     page, a solid pink block appears behind it as its shadow,
-                    the picture inside zooms in a touch, and the title turns
-                    italic like "Portfolio" in the header. */}
+                    and the picture inside zooms in a touch. The text below
+                    stays as it is. */}
                 <div className="relative transition duration-300 ease-out group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:shadow-[12px_12px_0_#ff7eb6] group-focus-visible:-translate-x-2 group-focus-visible:-translate-y-2 group-focus-visible:shadow-[12px_12px_0_#ff7eb6] motion-reduce:transition-none">
                   {project.image ? (
                     <div className="relative aspect-[179/136] overflow-hidden">
@@ -79,7 +79,7 @@ export default function Home() {
                   )}
                 </div>
                 {project.title && (
-                  <h2 className="mt-[1.2em] text-[clamp(16px,1.7vw,26px)] leading-tight font-bold group-hover:italic group-focus-visible:italic">
+                  <h2 className="mt-[1.2em] text-[clamp(16px,1.7vw,26px)] leading-tight font-bold">
                     {project.title}
                   </h2>
                 )}
