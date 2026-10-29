@@ -110,6 +110,11 @@ export default function Home() {
                     {project.subtitle}
                   </p>
                 )}
+                {project.teaser && (
+                  <p className="mx-auto mt-[0.7em] max-w-[24em] text-[clamp(12px,1vw,15px)] leading-snug text-balance">
+                    {project.teaser}
+                  </p>
+                )}
               </>
             );
             return (
