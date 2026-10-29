@@ -1,7 +1,7 @@
-// The projects in the front-page grid, in order. A project with a slug has
-// its own page at /projects/<slug> and its square links there; the rest are
-// still empty placeholders. A project with an image (in public/projects)
-// shows it in its square; the others show an "under construction" tile.
+// The projects in the front-page grid, in order. Each has its own page at
+// /projects/<slug>, and its square links there. A project with an image (in
+// public/projects) shows it in its square; the others show an "under
+// construction" tile.
 // The square is wider than most images, so some is cropped; imagePosition
 // (a Tailwind object-position class) says which part to keep.
 export interface Project {
@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "news-for-a-digital-generation",
     title: "News for a Digital Generation",
-    subtitle: "BA-thesis · Research",
+    subtitle: "BA-thesis · Media systems analysis",
     image: "/projects/ba-thesis.webp",
     // Keep the title at the top of the cover in view.
     imagePosition: "object-top",
@@ -38,18 +38,22 @@ export const PROJECTS: Project[] = [
     subtitle: "CMS · Stakeholder management",
   },
   {
-    slug: "user-centred-app-concept",
-    title: "User-Centred App Concept",
-    subtitle: "UX · Co-design",
+    slug: "eventful",
+    title: "Eventful",
+    subtitle: "App concept · UX · User testing",
+    image: "/projects/eventful/collage.png",
+    imagePosition: "object-center",
   },
   {
     slug: "fredagsbar-dk",
     title: "Fredagsbar.dk",
     subtitle: "Events · Leadership · Communication",
   },
-  {},
-  {},
-  {},
+  {
+    slug: "associations",
+    title: "Associations",
+    subtitle: "SAMSON · Board of Studies · Tutor",
+  },
 ];
 
 export function getProject(slug: string) {

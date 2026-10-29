@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 740 630" width="740" height="630">
+  <!-- The two ways of living with the watch: as a performance meter (a watch
+       whose face is a gauge pushed into the red) and as a mirror (a hand
+       mirror reflecting a calm face). -->
+  <defs>
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="11"/>
+      <feDisplacementMap in="SourceGraphic" scale="3"/>
+    </filter>
+    <g id="art" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- the meter watch -->
+      <path d="M170 224 L170 150 Q170 134 186 134 L254 134 Q270 134 270 150 L270 224"/>
+      <path d="M170 436 L170 510 Q170 526 186 526 L254 526 Q270 526 270 510 L270 436"/>
+      <circle cx="220" cy="330" r="112"/>
+      <circle cx="220" cy="330" r="94"/>
+      <path d="M108 300 L98 300 L98 320 L108 320"/>
+      <path d="M332 290 L342 290 L342 310 L332 310 M332 350 L342 350 L342 370 L332 370"/>
+      <!-- gauge -->
+      <path d="M152 360 A70 70 0 0 1 288 360"/>
+      <path d="M160 330 L170 336 M178 300 L186 308 M220 286 L220 298 M262 300 L254 308 M280 330 L270 336"/>
+      <path d="M220 360 L274 316"/>
+      <circle cx="220" cy="360" r="7"/>
+      <!-- effort lines -->
+      <path d="M352 210 L376 186 M362 236 L392 224 M340 184 L350 156"/>
+      <!-- the mirror -->
+      <ellipse cx="530" cy="276" rx="104" ry="128"/>
+      <ellipse cx="530" cy="276" rx="88" ry="112"/>
+      <path d="M512 404 L506 560 Q506 576 522 576 L538 576 Q554 576 554 560 L548 404"/>
+      <!-- calm face in the mirror -->
+      <path d="M494 262 C502 272 516 272 524 262"/>
+      <path d="M540 262 C548 272 562 272 570 262"/>
+      <path d="M498 272 L494 282 M510 274 L508 284 M548 274 L546 284 M560 272 L558 282"/>
+      <path d="M508 318 C522 330 544 330 556 316"/>
+      <!-- shine on the glass -->
+      <path d="M462 214 C470 194 484 180 500 172"/>
+      <path d="M458 240 L460 230"/>
+    </g>
+  </defs>
+  <rect width="740" height="630" fill="#cfe3f3"/>
+  <g filter="url(#rough)">
+    <use xlink:href="#art" href="#art" stroke="#8fa3b5" transform="translate(3 4)"/>
+    <use xlink:href="#art" href="#art" stroke="#1d1d1d"/>
+  </g>
+</svg>

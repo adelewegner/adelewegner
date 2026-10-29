@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 600" width="600" height="600">
+  <!-- An arm held out with a watch, and the body's data (sleep, pulse,
+       steps, energy) floating into it along dotted lines. -->
+  <defs>
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="3"/>
+      <feDisplacementMap in="SourceGraphic" scale="3"/>
+    </filter>
+    <g id="art" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- sleeve -->
+      <path d="M0 238 L92 243 L95 410 L0 415"/>
+      <path d="M58 262 C68 300 68 352 58 394"/>
+      <!-- arm -->
+      <path d="M92 248 C200 255 320 262 420 268"/>
+      <path d="M95 404 C200 400 320 396 420 392"/>
+      <path d="M160 300 C190 302 215 305 236 308"/>
+      <!-- fist and thumb -->
+      <path d="M420 268 C470 262 520 270 540 300 C560 332 556 380 520 396 C490 406 452 400 420 392"/>
+      <path d="M428 268 C442 242 498 238 520 254 C530 262 522 272 506 272"/>
+      <path d="M522 302 C536 312 536 326 523 333"/>
+      <path d="M526 338 C541 348 539 362 525 368"/>
+      <!-- straps -->
+      <path d="M292 270 L292 226 Q292 212 306 212 L354 212 Q368 212 368 226 L368 270"/>
+      <path d="M292 390 L292 434 Q292 448 306 448 L354 448 Q368 448 368 434 L368 390"/>
+      <path d="M302 428 L358 428 L358 440 L302 440 Z"/>
+      <!-- watch -->
+      <circle cx="330" cy="330" r="72"/>
+      <circle cx="330" cy="330" r="58"/>
+      <path d="M256 310 L248 310 L248 324 L256 324"/>
+      <path d="M404 304 L412 304 L412 318 L404 318"/>
+      <path d="M404 342 L412 342 L412 356 L404 356"/>
+      <!-- floating data: moon, heart, footprints, battery -->
+      <path d="M128 92 A36 36 0 1 0 160 150 A29 29 0 1 1 128 92 Z"/>
+      <path d="M168 86 L180 86 L168 100 L180 100"/>
+      <path d="M300 138 C266 114 264 82 288 80 C300 79 300 90 300 96 C300 90 300 79 312 80 C336 82 334 114 300 138 Z"/>
+      <ellipse cx="452" cy="146" rx="12" ry="20" transform="rotate(-12 452 146)"/>
+      <ellipse cx="490" cy="112" rx="12" ry="20" transform="rotate(-12 490 112)"/>
+      <rect x="490" y="196" width="62" height="32" rx="6"/>
+      <path d="M552 206 L560 206 L560 218 L552 218"/>
+      <path d="M502 206 L502 218 M514 206 L514 218 M526 206 L526 218"/>
+      <!-- dotted lines from the data into the watch -->
+      <path d="M160 160 C220 200 260 230 286 262" stroke-dasharray="2 12"/>
+      <path d="M300 150 C302 180 306 196 312 214" stroke-dasharray="2 12"/>
+      <path d="M462 172 C430 200 400 226 378 256" stroke-dasharray="2 12"/>
+      <path d="M492 234 C460 256 430 268 404 282" stroke-dasharray="2 12"/>
+    </g>
+    <g id="face" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">
+      <text x="330" y="310" font-size="12" font-weight="700" letter-spacing="1.5">ONS 28</text>
+      <text x="330" y="342" font-size="30">10:24</text>
+      <text x="330" y="368" font-size="13">&#9825; 72</text>
+    </g>
+  </defs>
+  <rect width="600" height="600" fill="#cfe3f3"/>
+  <g filter="url(#rough)">
+    <use xlink:href="#art" href="#art" stroke="#8fa3b5" transform="translate(3 4)"/>
+    <use xlink:href="#art" href="#art" stroke="#1d1d1d"/>
+  </g>
+  <use xlink:href="#face" href="#face" fill="#1d1d1d"/>
+</svg>

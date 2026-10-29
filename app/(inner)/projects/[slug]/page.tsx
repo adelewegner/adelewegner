@@ -6,10 +6,18 @@ interface ProjectPageProps {
   params: Promise<{ slug: string }>;
 }
 
+// Projects that have their own page in a folder beside this one, so this
+// general page must not claim their address too.
+const OWN_PAGES = new Set([
+  "smartwatch-in-everyday-life",
+  "news-for-a-digital-generation",
+  "eventful",
+]);
+
 export function generateStaticParams() {
-  return PROJECTS.filter((project) => project.slug).map((project) => ({
-    slug: project.slug!,
-  }));
+  return PROJECTS.filter(
+    (project) => project.slug && !OWN_PAGES.has(project.slug),
+  ).map((project) => ({ slug: project.slug! }));
 }
 
 export async function generateMetadata({
