@@ -168,7 +168,7 @@ export default function CvPage() {
             </a>
           </p>
           <p>
-            Private email:{" "}
+            Mail:{" "}
             <a href="mailto:adeleodderskov@gmail.com" className="underline">
               adeleodderskov@gmail.com
             </a>

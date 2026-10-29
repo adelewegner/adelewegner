@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const LINES = [
   { label: "Phone", text: "+45 42603012", href: "tel:+4542603012" },
   {
-    label: "Private email",
+    label: "Mail",
     text: "adeleodderskov@gmail.com",
     href: "mailto:adeleodderskov@gmail.com",
   },
@@ -24,16 +24,16 @@ const KEY_ROWS = [11, 11, 10, 9];
 // The contact page: a line drawing of a typewriter seen from above, in black
 // lines with the same hand-drawn wobble as the project drawings. Visitors
 // write a message on its paper; the contact details sit to its left, and a
-// telephone receiver hangs on its curly cord to its right (from md up). The
+// telephone receiver hangs on its curly cord to its right (from lg up). The
 // paper's contents are real HTML laid over the drawing, placed in
-// percentages of its 600×880 box and sized in cqw, so they stay on the paper
+// percentages of its 600×1000 box and sized in cqw, so they stay on the paper
 // at any width. The heading and the details type themselves out once.
 export default function ContactPage() {
   return (
-    <main className="mx-auto grid max-w-[1400px] grid-cols-1 overflow-hidden px-[5.5vw] pb-[6vw] md:grid-cols-[1fr_minmax(0,520px)_1fr] md:gap-x-[4vw]">
-      <div className="@container relative order-1 mx-auto mt-[4vw] w-full max-w-[520px] md:order-2">
+    <main className="mx-auto grid max-w-[1400px] grid-cols-1 overflow-hidden px-[5.5vw] pb-[6vw] lg:grid-cols-[1fr_minmax(0,520px)_1fr] lg:gap-x-[4vw]">
+      <div className="@container relative order-1 mx-auto mt-[4vw] w-full max-w-[520px] lg:order-2">
         <svg
-          viewBox="0 0 600 880"
+          viewBox="0 0 600 1000"
           className="block h-auto w-full text-black"
           aria-hidden
         >
@@ -65,7 +65,9 @@ export default function ContactPage() {
             {/* carriage return lever */}
             <path d="M94 512 L58 700 Q54 716 66 718 Q76 718 78 704 L108 540" />
             {/* body */}
-            <path d="M80 880 L86 594 Q88 570 112 570 L488 570 Q512 570 514 594 L520 880" />
+            <path d="M86 594 Q88 570 112 570 L488 570 Q512 570 514 594 L520 946 Q520 966 498 966 L102 966 Q80 966 80 946 Z" />
+            {/* feet */}
+            <path d="M112 966 L114 980 L160 980 L162 966 M438 966 L440 980 L486 980 L488 966" />
             <path d="M112 570 L118 548 M488 570 L482 548" />
             {/* cover plate sweeping in to the type basket */}
             <path d="M130 600 Q240 598 252 640 Q262 690 222 712" />
@@ -88,12 +90,14 @@ export default function ContactPage() {
                 />
               )),
             )}
+            {/* space bar */}
+            <path d="M196 912 L404 912 Q414 912 414 922 Q414 932 404 932 L196 932 Q186 932 186 922 Q186 912 196 912 Z" />
           </g>
         </svg>
 
-        {/* The paper: 130–470 across and 40–510 down in the 600×880 box.
+        {/* The paper: 130–470 across and 40–510 down in the 600×1000 box.
             Visitors write their message here. */}
-        <div className="absolute top-[9%] right-[25%] left-[25%] text-black">
+        <div className="absolute top-[8%] right-[25%] left-[25%] text-black">
           <h1
             className="typed text-[7cqw] leading-tight"
             style={{ animationDelay: "0.3s", ["--chars" as string]: 15 }}
@@ -105,9 +109,9 @@ export default function ContactPage() {
 
       </div>
 
-      {/* The details, to the left of the typewriter from md up, starting
+      {/* The details, to the left of the typewriter from lg up, starting
           level with the top of the paper; under it on phones. */}
-      <dl className="order-2 mt-10 space-y-[1.4em] text-center text-[clamp(15px,1.3vw,20px)] text-black md:order-1 md:mt-[calc(4vw+min(4.5vw,24px)+2em)] md:justify-self-end md:text-right">
+      <dl className="order-2 mt-10 space-y-[1.4em] text-center text-[clamp(15px,1.3vw,20px)] text-black lg:order-1 lg:mt-[calc(4vw+min(4.5vw,24px)+2em)] lg:justify-self-end lg:text-right">
         {LINES.map((line, index) => {
           const style = {
             animationDelay: `${1.2 + index * 0.9}s`,
@@ -135,7 +139,7 @@ export default function ContactPage() {
         })}
       </dl>
 
-      <div className="order-3 hidden md:block">
+      <div className="order-3 hidden lg:block">
         <HangingPhone />
       </div>
     </main>
@@ -146,14 +150,45 @@ export default function ContactPage() {
 const COIL_TURNS = 30;
 
 // A telephone receiver hanging from the top of the page on a curly cord,
-// drawn in the same black line as the typewriter. It sways a little, from
-// the top; not at all with reduced motion. Hidden on narrow screens, where
-// the typewriter fills the width (see ContactPage).
+// drawn in the same black line as the typewriter, with a speech bubble
+// coming from the earpiece that calls the number. The receiver sways a
+// little from the top; not at all with reduced motion. Hidden on narrow
+// screens, where the typewriter fills the width (see ContactPage). --w is
+// the receiver's width; the bubble is sized and placed from it so its tail
+// keeps pointing at the earpiece.
 function HangingPhone() {
+  return (
+    <div className="relative [--w:clamp(100px,10vw,150px)]">
+      <PhoneDrawing />
+      <a
+        href="tel:+4542603012"
+        className="group absolute top-[calc(var(--w)*1.6)] left-[calc(2vw+var(--w)*0.72)] block w-[calc(var(--w)*1.35)] text-black"
+      >
+        <svg viewBox="0 0 210 120" className="block h-auto w-full" aria-hidden>
+          <path
+            filter="url(#phone-rough)"
+            d="M44 10 L182 8 Q202 8 202 30 L202 62 Q202 84 180 84 L66 84 L8 112 L40 84 Q20 84 20 62 L20 32 Q20 10 44 10 Z"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3.2"
+            strokeLinejoin="round"
+            className="transition-[fill] duration-200 group-hover:fill-[#ff7eb6]"
+          />
+        </svg>
+        <span className="absolute inset-x-[10%] top-[6%] bottom-[30%] flex items-center justify-center pl-[6%] text-center text-[calc(var(--w)*0.13)] leading-tight">
+          or give me a call
+        </span>
+      </a>
+    </div>
+  );
+}
+
+// The receiver and its cord.
+function PhoneDrawing() {
   return (
     <svg
       viewBox="0 0 160 700"
-      className="phone-sway ml-[2vw] block h-auto w-[clamp(100px,10vw,150px)] text-black"
+      className="phone-sway ml-[2vw] block h-auto w-(--w) text-black"
       aria-hidden
     >
       <defs>

@@ -10,7 +10,6 @@ const SUBJECT = "Hello from adelewegner.com";
 // already written and addressed to Adele; they press send there.
 export default function MessageForm() {
   const [message, setMessage] = useState("");
-  const [name, setName] = useState("");
   const [error, setError] = useState(false);
 
   function send(event: React.FormEvent) {
@@ -19,16 +18,14 @@ export default function MessageForm() {
       setError(true);
       return;
     }
-    const body = name.trim() ? `${message}\n\n${name.trim()}` : message;
     window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(
       SUBJECT,
-    )}&body=${encodeURIComponent(body)}`;
+    )}&body=${encodeURIComponent(message)}`;
   }
 
   return (
     <form onSubmit={send} className="mt-[3cqw]" noValidate>
-      {/* Set out like a letter: the greeting, the message, then a
-          signature line and Send. */}
+      {/* Set out like a letter: the greeting, the message, then Send. */}
       <p className="text-[3.4cqw]">Dear Adele,</p>
       <label htmlFor="message" className="sr-only">
         Your message
@@ -51,17 +48,7 @@ export default function MessageForm() {
           Write a message first.
         </p>
       )}
-      <div className="mt-[3cqw] flex items-end justify-between gap-[3cqw]">
-        <label className="min-w-0 flex-1 text-[3.4cqw]">
-          <span className="sr-only">Your name</span>
-          <input
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-            placeholder="— your name"
-            autoComplete="name"
-            className="w-full bg-transparent text-black outline-none placeholder:text-black/40"
-          />
-        </label>
+      <div className="mt-[3cqw] flex justify-end">
         <button
           type="submit"
           className="shrink-0 rounded-full border-2 border-black bg-[#ff7eb6] px-[3cqw] py-[0.8cqw] text-[3cqw] text-black shadow-[2px_2px_0_#000] transition duration-200 ease-out hover:-translate-x-px hover:-translate-y-px hover:shadow-[4px_4px_0_#000] motion-reduce:transition-none"
