@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import NextProject from "@/app/components/next-project";
 import { OWN_PAGES, PROJECTS, getProject } from "@/lib/projects";
 
 interface ProjectPageProps {
@@ -21,7 +22,8 @@ export async function generateMetadata({
   return { title: `${project?.title} – Adele Odderskov Wegner` };
 }
 
-// A project's own page. Only the title for now; the rest is still to come.
+// A project's own page. Only the title for now, and the buttons to the
+// previous and next project; the rest is still to come.
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const project = getProject((await params).slug);
   if (!project) notFound();
@@ -34,6 +36,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <p className="mt-[0.9em] text-[clamp(10px,1.05vw,16px)] tracking-[0.12em]">
         {project.subtitle}
       </p>
+      <NextProject current={project.slug!} />
     </main>
   );
 }

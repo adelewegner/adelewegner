@@ -5,12 +5,16 @@ import NavPills from "@/app/components/nav-pills";
 // contact pills on the left, "Portfolio" in the middle leading home, the
 // name and disciplines on the right, and a way back underneath. On phones
 // the pills and name share the first row and Portfolio drops below them.
+// The pills sit at exactly the same spot as on the front page (2.5vw in
+// from the top left corner), so they don't jump when changing page.
 export default function SiteHeader() {
   return (
-    <header className="bg-purple text-lime">
+    <header className="relative bg-purple text-lime">
+      <NavPills className="absolute top-[2.5vw] left-[2.5vw] z-10" />
       <div className="mx-auto max-w-[1600px] px-[5.5vw] pt-[2.5vw] pb-[2vw]">
         <div className="grid grid-cols-2 items-start gap-y-4 sm:grid-cols-3">
-          <NavPills />
+          {/* Holds the pills' place in the grid. */}
+          <div aria-hidden />
 
           <Link
             href="/"
