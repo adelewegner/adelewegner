@@ -8,7 +8,6 @@
      Everyone else gets Bricolage Grotesque as the nearest stand-in. */
   --font-display: Skia, var(--font-display-face);
   --font-serif: var(--font-serif-face);
-  --font-hand: var(--font-hand-face);
 }
 
 @layer base {

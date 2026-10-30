@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 // What's in Adele's bag: cut-out photos in public/bag, each with a short
-// handwritten note. On wide screens the bag is big at the bottom and the
+// note in small spaced capitals. On wide screens the bag is big at the bottom and the
 // rest sit in an arc around it: `left`, `top` and `width` place each one as a
 // share of the area, `turn` tips it a few degrees, and `place` says
 // whether its note sits above or below it, with a thin pointed arrow.
@@ -137,19 +137,41 @@ export default function AboutPage() {
         </h1>
 
         {/* On wide screens the text sits centred under "ABOUT", whose middle
-            is about a third of the way across, with its last line level
-            with the bottom of the photo. */}
-        <div className="grid items-end gap-8 lg:grid-cols-[1.3fr_1fr]">
-          <p className="order-2 text-justify text-[clamp(16px,1.35vw,20px)] leading-relaxed text-black lg:order-1 lg:ml-[12cqw] lg:w-[42cqw]">
-            {/* Adele's introduction goes here. */}
-          </p>
-          <div className="relative order-1 mx-auto -mt-[24vw] aspect-[833/1206] w-[min(52vw,315px)] lg:order-2 lg:mr-[5cqw] lg:-mt-[min(24vw,340px)] lg:w-[min(27vw,375px)]">
+            is about a third of the way across, and the photo stands to its
+            right with its bottom level with the text's last line, tall
+            enough to reach up in front of "ME". */}
+        <div className="relative grid gap-8 lg:block">
+          <div className="order-2 text-justify text-[15px] leading-relaxed text-black lg:order-1 lg:ml-[8cqw] lg:w-[50cqw] lg:text-[clamp(13px,1.05vw,16px)] space-y-[1em]">
+            <p>
+              Hi! I’m Adele, and this is a little glimpse of the person behind
+              all the academic stuff. My closest friends would describe me as
+              creative, ambitious and energetic. I’m naturally curious, never
+              afraid to ask questions, and always up for testing a new idea or
+              exploring a different way of doing things. I’ve always been
+              interested in why people do what they do, and how the things we
+              surround ourselves with shape our everyday lives. Over time, that
+              curiosity has grown into an interest in the relationship between
+              people, technology and design. I grew up in Northern Jutland,
+              moved to Aarhus for my bachelor’s degree, and eventually found my
+              way to Copenhagen. So, I’d like to think I’m pretty adaptable,
+              both when it comes to new places and new challenges.
+            </p>
+            <p>
+              Outside of my studies, I enjoy staying active, being creative and
+              spending time with the people around me. I’m someone who likes
+              having a lot going on, but who is equally happy slowing down and
+              enjoying the little things. I’ve heard that you can tell a lot
+              about a person by what’s inside their bag. So, scroll down and
+              have a look inside mine!
+            </p>
+          </div>
+          <div className="relative order-1 mx-auto -mt-[24vw] aspect-[833/1206] w-[min(52vw,315px)] lg:absolute lg:right-[5cqw] lg:bottom-0 lg:mt-0 lg:w-[34cqw]">
             <Image
               src="/adele-about.png"
               alt="Adele Odderskov Wegner"
               fill
               priority
-              sizes="(max-width: 1024px) 52vw, 375px"
+              sizes="(max-width: 1024px) 52vw, 420px"
               className="object-contain object-bottom brightness-110"
             />
           </div>
@@ -198,7 +220,7 @@ export default function AboutPage() {
               />
               {item.place !== "none" && (
                 <p
-                  className={`flex items-center gap-2 text-center font-hand lg:gap-1 text-[14px] leading-snug tracking-[0.06em] uppercase lg:w-max lg:max-w-[min(12vw,150px)] lg:text-[clamp(11px,0.95vw,13px)] ${
+                  className={`flex items-center gap-2 text-center text-[12px] leading-snug tracking-[0.14em] text-black uppercase lg:w-max lg:max-w-[min(13vw,160px)] lg:gap-1 lg:text-[clamp(10px,0.8vw,12px)] ${
                     item.place === "above"
                       ? "lg:flex-col-reverse"
                       : "lg:flex-col"
