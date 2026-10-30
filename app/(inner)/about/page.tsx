@@ -111,36 +111,52 @@ const BAG = [
   },
 ] as const;
 
-// The "Meet Adele" page. It opens with a huge "Meet" behind the top of a
-// cut-out photo of Adele in a yellow sticker outline and "Adele" in front
-// of its bottom edge. Then what's in her bag, and a link to get in touch.
+// The "Meet Adele" page. It opens like a magazine spread: "ABOUT ME" in
+// huge, tall, narrow capitals across the full width, a cut-out photo of
+// Adele standing in front of "ME", and a short introduction to her left.
+// Then what's in her bag, and a link to get in touch.
 export default function AboutPage() {
   return (
     <main className="mx-auto max-w-[1300px] overflow-hidden px-[5.5vw] pt-[3vw] pb-[8vw] text-purple">
-      <h1 className="sr-only">Meet Adele</h1>
+      {/* A tab on the right edge of the screen, reading upwards, that stays
+          put while the page scrolls. Pink like the other buttons, and it
+          slides out a little on hover. */}
+      <Link
+        href="/cv"
+        className="fixed top-1/2 right-0 z-30 -translate-y-1/2 rounded-l-2xl border-2 border-r-0 border-purple bg-[#ff7eb6] px-[0.6em] py-[1.6em] text-[clamp(14px,1.2vw,18px)] tracking-[0.14em] text-purple uppercase shadow-[-3px_3px_0_#3a1f49] transition-[padding] duration-200 ease-out [writing-mode:vertical-rl] hover:pr-[0.9em] motion-reduce:transition-none"
+      >
+        <span className="inline-block rotate-180">cv</span>
+      </Link>
 
-      <div className="relative">
-        {/* Sized in em, from this font size, so the stack keeps its shape. */}
-        <div
-          aria-hidden
-          className="relative flex flex-col items-center text-[clamp(72px,12vw,180px)] leading-none font-bold text-black [-webkit-text-stroke:max(1.5px,0.012em)_#ff7eb6]"
-        >
-          <p>Meet</p>
-          <div className="relative z-10 -mt-[0.42em] aspect-[870/1248] w-[2.1em]">
+      <div className="@container relative">
+        {/* Sized in cqw to fill the page width exactly, so it stays centred.
+            Stretched to 1.5 times its height; the bottom margin makes room
+            for the stretch, which doesn't take up space by itself. */}
+        <h1 className="mb-[0.4em] origin-top scale-y-150 text-center text-[25.6cqw] leading-[0.8] font-bold whitespace-nowrap text-black uppercase [font-family:var(--font-display-face)] [font-stretch:75%]">
+          About me
+        </h1>
+
+        {/* On wide screens the text sits centred under "ABOUT", whose middle
+            is about a third of the way across, with its last line level
+            with the bottom of the photo. */}
+        <div className="grid items-end gap-8 lg:grid-cols-[1.3fr_1fr]">
+          <p className="order-2 text-justify text-[clamp(16px,1.35vw,20px)] leading-relaxed text-black lg:order-1 lg:ml-[12cqw] lg:w-[42cqw]">
+            {/* Adele's introduction goes here. */}
+          </p>
+          <div className="relative order-1 mx-auto -mt-[24vw] aspect-[833/1206] w-[min(52vw,315px)] lg:order-2 lg:mr-[5cqw] lg:-mt-[min(24vw,340px)] lg:w-[min(27vw,375px)]">
             <Image
-              src="/meet-adele.png"
-              alt=""
+              src="/adele-about.png"
+              alt="Adele Odderskov Wegner"
               fill
               priority
-              sizes="(max-width: 1500px) 25vw, 378px"
-              className="object-contain"
+              sizes="(max-width: 1024px) 52vw, 375px"
+              className="object-contain object-bottom brightness-110"
             />
           </div>
-          <p className="relative z-20 -mt-[0.62em]">Adele</p>
         </div>
       </div>
 
-      <section aria-labelledby="bag" className="mt-[clamp(64px,8vw,128px)]">
+      <section aria-labelledby="bag" className="mt-[clamp(40px,4vw,64px)]">
         {/* Light and editorial: the serif at regular weight with "my" in
             pink, over a small spaced-out line of capitals. */}
         <h2
@@ -152,7 +168,7 @@ export default function AboutPage() {
         <p className="mt-4 text-center text-[clamp(11px,1vw,14px)] tracking-[0.3em] text-black uppercase">
           The everyday essentials
         </p>
-        <ul className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:relative lg:mt-24 lg:block lg:aspect-[16/10]">
+        <ul className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:relative lg:mt-10 lg:block lg:aspect-[16/10]">
           {BAG.map((item) => (
             <li
               key={item.src}
