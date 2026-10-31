@@ -65,11 +65,13 @@ export default function Home() {
         className="mx-auto max-w-[1600px] px-[5.5vw] pt-[max(4vw,48px)] pb-[10vw]"
       >
         {/* Centred over the grid below it. */}
-        <p className="flex items-center justify-center gap-[1em] text-[clamp(9px,1.05vw,15px)] tracking-[0.12em] text-purple uppercase">
-          <span
-            aria-hidden
-            className="h-[2em] w-[2em] shrink-0 rounded-full border-2 border-purple bg-lime"
-          />
+        <p className="flex items-center justify-center gap-[0.7em] text-[clamp(9px,1.05vw,15px)] font-bold tracking-[0.12em] text-purple uppercase">
+          {/* A green dot that slowly blinks, with a soft green ring
+              spreading out from it each time, as on the contact page. */}
+          <span aria-hidden className="relative flex size-[1em] shrink-0">
+            <span className="absolute inset-0 animate-[ping_2.4s_ease-out_infinite] rounded-full bg-[#2bb24c] motion-reduce:animate-none" />
+            <span className="relative size-full animate-[pulse_2.4s_ease-in-out_infinite] rounded-full bg-[#2bb24c] motion-reduce:animate-none" />
+          </span>
           Open for work · Copenhagen
         </p>
 
