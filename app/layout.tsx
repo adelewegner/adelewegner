@@ -21,9 +21,9 @@ const DESCRIPTION =
   "Master's student at the IT University of Copenhagen with a passion for UX research, interaction design and creative data communication.";
 
 // The title, text and picture shown when the site is shared, e.g. on
-// LinkedIn. public/og-image.png is the name, tagline and "Portfolio" in
-// lime on the purple of the front page, at 1200×627, the size LinkedIn and
-// others expect.
+// LinkedIn. public/og-image.png is a magazine-like cover: "Adele" in a
+// large serif over a lime circle on cream, with "an online portfolio,
+// follow along", at 1200×627, the size LinkedIn and others expect.
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.adelewegner.com"),
   title: "Adele Odderskov Wegner",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 627,
-        alt: "Adele Odderskov Wegner, UX · Communication · Co-design: Portfolio",
+        alt: "Adele Odderskov Wegner: an online portfolio, follow along",
       },
     ],
   },
