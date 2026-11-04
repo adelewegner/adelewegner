@@ -170,12 +170,12 @@ export default function AboutPage() {
 
       <section aria-labelledby="bag" className="mt-[clamp(40px,4vw,64px)]">
         {/* Light and editorial: the serif at regular weight with "my" in
-            tangerine, over a small spaced-out line of capitals. */}
+            pink, over a small spaced-out line of capitals. */}
         <h2
           id="bag"
           className="text-center text-[clamp(40px,5.5vw,84px)] leading-none font-normal tracking-[-0.01em] text-black"
         >
-          What&rsquo;s in <span className="text-[#ff8f2b]">my</span> bag?
+          What&rsquo;s in <span className="text-[#ff7eb6]">my</span> bag?
         </h2>
         <p className="mt-4 text-center text-[clamp(11px,1vw,14px)] tracking-[0.3em] text-black uppercase">
           The everyday essentials
@@ -242,7 +242,7 @@ export default function AboutPage() {
       <p className="mt-12 text-center text-[clamp(20px,2vw,30px)]">
         <Link
           href="/contact"
-          className="underline decoration-[#ff8f2b] decoration-4 underline-offset-[0.2em] transition-colors hover:text-[#ff8f2b]"
+          className="underline decoration-[#ff7eb6] decoration-4 underline-offset-[0.2em] transition-colors hover:text-[#ff7eb6]"
         >
           Let&rsquo;s work together &rarr;
         </Link>

@@ -7,9 +7,9 @@ const SLUGS = PROJECTS.flatMap((project) =>
 );
 
 const BUTTON =
-  "flex h-[2.4em] items-center gap-[0.6em] rounded-full border-2 border-purple bg-[#ff8f2b] text-[clamp(15px,1.4vw,22px)] text-purple shadow-[3px_3px_0_#3a1f49] transition duration-200 ease-out hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[5px_5px_0_#3a1f49] motion-reduce:transition-none";
+  "flex h-[2.2em] items-center gap-[0.6em] rounded-full border border-purple bg-[#ff7eb6] text-[clamp(14px,1.3vw,20px)] text-purple transition-colors duration-200 hover:bg-[#f763a3] motion-reduce:transition-none";
 const ARROW =
-  "flex size-[1.65em] items-center justify-center rounded-full bg-purple text-lime";
+  "flex size-[1.5em] items-center justify-center rounded-full bg-purple text-lime";
 
 // The "Previous project" and "Next project" buttons at the end of a
 // project page, side by side and styled like the Meet Adele button on the
@@ -28,7 +28,7 @@ export default function NextProject({ current }: { current: string }) {
     >
       <Link
         href={`/projects/${previous}`}
-        className={`${BUTTON} pr-[1.2em] pl-[0.3em]`}
+        className={`${BUTTON} pr-[1.1em] pl-[0.3em]`}
       >
         <span aria-hidden className={ARROW}>
           &larr;
@@ -37,7 +37,7 @@ export default function NextProject({ current }: { current: string }) {
       </Link>
       <Link
         href={`/projects/${next}`}
-        className={`${BUTTON} pr-[0.3em] pl-[1.2em]`}
+        className={`${BUTTON} pr-[0.3em] pl-[1.1em]`}
       >
         Next project
         <span aria-hidden className={ARROW}>
