@@ -9,7 +9,7 @@ const LINKS = [
 ];
 
 // The cv and contact pills, used on every page. The one for the page you are
-// on turns pink, and the others turn pink on hover.
+// on turns tangerine, and the others turn tangerine on hover.
 export default function NavPills({ className = "" }: { className?: string }) {
   const pathname = usePathname();
 
@@ -25,7 +25,7 @@ export default function NavPills({ className = "" }: { className?: string }) {
             href={link.href}
             aria-current={active ? "page" : undefined}
             className={`flex h-[1.85em] items-center rounded-full px-[1.6em] transition-colors duration-200 ${
-              active ? "bg-[#ff7eb6]" : "bg-lime hover:bg-[#ff7eb6]"
+              active ? "bg-[#ff8f2b]" : "bg-lime hover:bg-[#ff8f2b]"
             }`}
           >
             {link.label}

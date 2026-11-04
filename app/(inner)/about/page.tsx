@@ -118,16 +118,6 @@ const BAG = [
 export default function AboutPage() {
   return (
     <main className="mx-auto max-w-[1300px] overflow-hidden px-[5.5vw] pt-[3vw] pb-[8vw] text-purple">
-      {/* A tab on the right edge of the screen, reading upwards, that stays
-          put while the page scrolls. Pink like the other buttons, and it
-          slides out a little on hover. */}
-      <Link
-        href="/cv"
-        className="fixed top-1/2 right-0 z-30 -translate-y-1/2 rounded-l-2xl border-2 border-r-0 border-purple bg-[#ff7eb6] px-[0.6em] py-[1.6em] text-[clamp(14px,1.2vw,18px)] tracking-[0.14em] text-purple uppercase shadow-[-3px_3px_0_#3a1f49] transition-[padding] duration-200 ease-out [writing-mode:vertical-rl] hover:pr-[0.9em] motion-reduce:transition-none"
-      >
-        <span className="inline-block rotate-180">cv</span>
-      </Link>
-
       <div className="@container relative">
         {/* Sized in cqw to fill the page width exactly, so it stays centred.
             Stretched to 1.5 times its height; the bottom margin makes room
@@ -180,12 +170,12 @@ export default function AboutPage() {
 
       <section aria-labelledby="bag" className="mt-[clamp(40px,4vw,64px)]">
         {/* Light and editorial: the serif at regular weight with "my" in
-            pink, over a small spaced-out line of capitals. */}
+            tangerine, over a small spaced-out line of capitals. */}
         <h2
           id="bag"
           className="text-center text-[clamp(40px,5.5vw,84px)] leading-none font-normal tracking-[-0.01em] text-black"
         >
-          What&rsquo;s in <span className="text-[#ff7eb6]">my</span> bag?
+          What&rsquo;s in <span className="text-[#ff8f2b]">my</span> bag?
         </h2>
         <p className="mt-4 text-center text-[clamp(11px,1vw,14px)] tracking-[0.3em] text-black uppercase">
           The everyday essentials
@@ -252,7 +242,7 @@ export default function AboutPage() {
       <p className="mt-12 text-center text-[clamp(20px,2vw,30px)]">
         <Link
           href="/contact"
-          className="underline decoration-[#ff7eb6] decoration-4 underline-offset-[0.2em] transition-colors hover:text-[#ff7eb6]"
+          className="underline decoration-[#ff8f2b] decoration-4 underline-offset-[0.2em] transition-colors hover:text-[#ff8f2b]"
         >
           Let&rsquo;s work together &rarr;
         </Link>

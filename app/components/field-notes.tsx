@@ -38,7 +38,7 @@ export default function FieldNotes({ notes }: { notes: FieldNote[] }) {
                 ? "Show newest notes first"
                 : "Show oldest notes first"
             }
-            className="flex size-10 items-center justify-center rounded-lg border-2 border-purple transition-colors hover:bg-[#ff7eb6]"
+            className="flex size-10 items-center justify-center rounded-lg border-2 border-purple transition-colors hover:bg-[#ff8f2b]"
           >
             <svg
               viewBox="0 0 24 24"
