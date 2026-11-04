@@ -228,7 +228,7 @@ export default function CvPage() {
           <Section title="Languages">
             <List items={LANGUAGES} />
           </Section>
-          <Section title="Relevant courses">
+          <Section title="Selected courses">
             <List items={COURSES} />
           </Section>
         </div>
