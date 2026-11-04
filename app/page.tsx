@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Spiral } from "@/app/components/asks-spiral";
 import NavPills from "@/app/components/nav-pills";
 import SiteFooter from "@/app/components/site-footer";
+import { getAsks } from "@/lib/asks";
 import { PROJECTS } from "@/lib/projects";
 
 // The front page: a purple band with the portrait and the title, then a lime
@@ -10,6 +12,8 @@ import { PROJECTS } from "@/lib/projects";
 // the page keeps the proportions of the design at any width, with clamps to
 // stop text getting too small on phones or too big on very wide screens.
 export default function Home() {
+  const asks = getAsks();
+
   return (
     <main className="min-h-screen bg-lime">
       <header className="relative h-[clamp(240px,39vw,600px)] overflow-hidden bg-purple text-lime">
@@ -84,7 +88,17 @@ export default function Home() {
                     and the picture inside zooms in a touch. The text below
                     stays as it is. */}
                 <div className="relative transition duration-300 ease-out group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:shadow-[12px_12px_0_#ff7eb6] group-focus-visible:-translate-x-2 group-focus-visible:-translate-y-2 group-focus-visible:shadow-[12px_12px_0_#ff7eb6] motion-reduce:transition-none">
-                  {project.image ? (
+                  {project.slug === "500-asks" ? (
+                    // The challenge's own live spiral, so the picture grows
+                    // with every ask, on a pastel yellow.
+                    <div className="flex aspect-[179/136] items-center justify-center overflow-hidden bg-[#fbefb4]">
+                      <Spiral
+                        asks={asks}
+                        close
+                        className="h-full w-auto transition-transform duration-500 ease-out group-hover:scale-105 motion-reduce:transition-none"
+                      />
+                    </div>
+                  ) : project.image ? (
                     <div className="relative aspect-[179/136] overflow-hidden">
                       <Image
                         src={project.image}
@@ -122,7 +136,10 @@ export default function Home() {
             return (
               <article key={index} className="text-center text-purple">
                 {project.slug ? (
-                  <Link href={`/projects/${project.slug}`} className="group block">
+                  <Link
+                    href={`/projects/${project.slug}`}
+                    className="group block"
+                  >
                     {tile}
                   </Link>
                 ) : (

@@ -17,11 +17,11 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
-    slug: "1000-rejections",
-    title: "Challenge: 1000 rejections",
+    slug: "500-asks",
+    title: "Challenge: 500 asks",
     subtitle: "Creative Coding · Creative Data Visualization · Personal Data",
     teaser:
-      "A personal project making 1,000 asks, tracked as data. Follow the journey.",
+      "A personal project making 500 asks, tracked as data. Follow the journey.",
   },
   {
     slug: "news-for-a-digital-generation",
@@ -78,6 +78,7 @@ export const PROJECTS: Project[] = [
 // [slug] page.
 export const OWN_PAGES = PROJECTS.map((project) => project.slug).filter(
   (slug): slug is string =>
+    slug === "500-asks" ||
     slug === "news-for-a-digital-generation" ||
     slug === "smartwatch-in-everyday-life" ||
     slug === "eventful",

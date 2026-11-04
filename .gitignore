@@ -42,3 +42,4 @@ next-env.d.ts
 
 # exam papers kept locally for reference, never published
 /*.pdf
+/*.xlsx
