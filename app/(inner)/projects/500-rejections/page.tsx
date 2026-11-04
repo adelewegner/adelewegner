@@ -5,15 +5,15 @@ import NextProject from "@/app/components/next-project";
 import { formatDate, getAsks, getNotes } from "@/lib/asks";
 
 export const metadata: Metadata = {
-  title: "Challenge: 500 asks – Adele Odderskov Wegner",
+  title: "Challenge: 500 rejections – Adele Odderskov Wegner",
 };
 
-// Challenge: 500 asks, Adele's personal project from autumn 2026 to autumn
+// Challenge: 500 rejections, Adele's personal project from autumn 2026 to autumn
 // 2028. First the idea and why, then the asks so far as a growing spiral,
 // then her field notes along the way, newest first. The asks and notes live in
-// content/500-asks (see the README there) and are read when the site is
+// content/500-rejections (see the README there) and are read when the site is
 // built, so adding one is a matter of editing those files and pushing.
-export default function FiveHundredAsksProject() {
+export default function FiveHundredRejectionsProject() {
   const asks = getAsks().map(({ date, ...ask }) => ({
     ...ask,
     when: formatDate(date),
@@ -31,7 +31,7 @@ export default function FiveHundredAsksProject() {
 
       <section className="max-w-[56em] space-y-4 py-[4vw] text-[clamp(15.7px,1.18vw,17.9px)] leading-[1.7]">
         <h1 className="text-[clamp(28px,3.2vw,52px)] leading-tight">
-          Challenge: 500 asks
+          Challenge: 500 rejections
         </h1>
         <p>
           A year ago, I came across a young woman sharing a new project of hers.
@@ -43,8 +43,8 @@ export default function FiveHundredAsksProject() {
           opportunity you never would have found otherwise. A friend of mine has
           been a huge inspiration, as she started the same journey. So, from
           fall 2026 to fall 2028, I&rsquo;m setting myself a challenge. 500
-          asks. Some professional, some personal, and some just for the sake of
-          seeing what might happen.
+          rejections. Some professional, some personal, and some just for the
+          sake of seeing what might happen.
         </p>
         <p>
           The spiral below grows by one every time I make an ask. It tracks
@@ -69,7 +69,7 @@ export default function FiveHundredAsksProject() {
         }))}
       />
 
-      <NextProject current="500-asks" />
+      <NextProject current="500-rejections" />
     </main>
   );
 }

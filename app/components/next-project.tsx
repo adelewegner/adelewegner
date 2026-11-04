@@ -7,7 +7,7 @@ const SLUGS = PROJECTS.flatMap((project) =>
 );
 
 const BUTTON =
-  "flex h-[2.4em] items-center gap-[0.6em] rounded-full border-2 border-purple bg-[#ff7eb6] text-[clamp(15px,1.4vw,22px)] text-purple shadow-[3px_3px_0_#3a1f49] transition duration-200 ease-out hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[5px_5px_0_#3a1f49] motion-reduce:transition-none";
+  "flex h-[2.4em] items-center gap-[0.6em] rounded-full border-2 border-purple bg-[#f7f1dd] text-[clamp(15px,1.4vw,22px)] text-purple shadow-[3px_3px_0_#3a1f49] transition duration-200 ease-out hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[5px_5px_0_#3a1f49] motion-reduce:transition-none";
 const ARROW =
   "flex size-[1.65em] items-center justify-center rounded-full bg-purple text-lime";
 

@@ -1,4 +1,4 @@
-# Challenge: 500 asks – sådan opdaterer du
+# Challenge: 500 rejections – sådan opdaterer du
 
 ## asks.csv
 

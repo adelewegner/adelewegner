@@ -116,7 +116,7 @@ export function Spiral({
     <svg
       viewBox={`${-size} ${-size} ${size * 2} ${size * 2}`}
       role="img"
-      aria-label={`A spiral of the ${asks.length} asks so far: ${count("accepted")} accepted, ${count("rejected")} rejected and ${count("pending")} pending`}
+      aria-label={`A spiral of the ${asks.length} rejections chased so far: ${count("accepted")} accepted, ${count("rejected")} rejected and ${count("pending")} pending`}
       className={className}
     >
       <path
@@ -170,7 +170,7 @@ export default function AsksSpiral({ asks }: { asks: SpiralAsk[] }) {
         {/* A deeper pink than the buttons, so the small text can be read
             on the lime. */}
         <p className="mt-4 font-bold text-[#e0408f]">
-          {asks.length} of {TOTAL} asks made so far
+          {asks.length} of {TOTAL} rejections chased so far
         </p>
         {latest >= 0 && (
           <p className="text-purple/70">Last updated {asks[latest].when}</p>
@@ -206,17 +206,19 @@ export default function AsksSpiral({ asks }: { asks: SpiralAsk[] }) {
 
           <KeyHeading>Size = fear level</KeyHeading>
           <KeyNote>
-            Bigger shapes are asks that felt scarier to make (1–3).
+            Bigger shapes are rejections that felt scarier to chase (1–3).
           </KeyNote>
 
-          <KeyHeading>Position = sequence of asks</KeyHeading>
+          <KeyHeading>Position = sequence of rejections</KeyHeading>
           <KeyNote>
-            Each ask spirals outward from the centre. #1 sits in the middle, and
-            the spiral grows as the count goes up.
+            Each rejection spirals outward from the centre. #1 sits in the
+            middle, and the spiral grows as the count goes up.
           </KeyNote>
         </div>
 
-        {!asks.length && <p className="mt-8">The first ask is coming soon.</p>}
+        {!asks.length && (
+          <p className="mt-8">The first rejection is coming soon.</p>
+        )}
       </div>
 
       <Spiral asks={asks} className="mx-auto block w-full max-w-[520px]" />

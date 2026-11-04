@@ -1,9 +1,9 @@
 import { readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 
-// The data behind "Challenge: 500 asks", read from content/500-asks when the
-// site is built. content/500-asks/README.md explains the format for Adele.
-const FOLDER = path.join(process.cwd(), "content/500-asks");
+// The data behind "Challenge: 500 rejections", read from
+// content/500-rejections when the site is built. Its README.md explains the format for Adele.
+const FOLDER = path.join(process.cwd(), "content/500-rejections");
 
 export type Status = "accepted" | "rejected" | "pending";
 export type Category = "professional" | "personal";

@@ -45,14 +45,13 @@ export default function Home() {
 
       {/* "Meet Adele", sitting across the bottom edge of the purple band,
           centred under "Portfolio" (half the word's width is about 2.05
-          times its font size, which is clamp(40px,10.6vw,170px)). Styled like the project
-          squares' hover: a pink pill with a thin purple outline and a solid
-          purple block shadow, plus a purple circle with a lime arrow. On
+          times its font size, which is clamp(40px,10.6vw,170px)). A cream
+          pill with a thin purple outline and a solid purple block shadow, plus a purple circle with a lime arrow. On
           hover it lifts a little further. */}
       <div className="relative z-10 h-0">
         <Link
           href="/about"
-          className="absolute top-0 right-[calc(max(0px,(100%-1600px)/2)+5.5vw+clamp(82px,21.7vw,348px))] flex h-[2.4em] translate-x-1/2 -translate-y-1/2 items-center gap-[0.6em] rounded-full border-2 border-purple bg-[#ff7eb6] pr-[0.3em] pl-[1.2em] text-[clamp(14px,1.5vw,23px)] text-purple shadow-[3px_3px_0_#3a1f49] transition duration-200 ease-out hover:translate-x-[calc(50%-2px)] hover:-translate-y-[calc(50%+2px)] hover:shadow-[5px_5px_0_#3a1f49] motion-reduce:transition-none"
+          className="absolute top-0 right-[calc(max(0px,(100%-1600px)/2)+5.5vw+clamp(82px,21.7vw,348px))] flex h-[2.4em] translate-x-1/2 -translate-y-1/2 items-center gap-[0.6em] rounded-full border-2 border-purple bg-[#f7f1dd] pr-[0.3em] pl-[1.2em] text-[clamp(14px,1.5vw,23px)] text-purple shadow-[3px_3px_0_#3a1f49] transition duration-200 ease-out hover:translate-x-[calc(50%-2px)] hover:-translate-y-[calc(50%+2px)] hover:shadow-[5px_5px_0_#3a1f49] motion-reduce:transition-none"
         >
           Meet Adele
           <span
@@ -88,7 +87,7 @@ export default function Home() {
                     and the picture inside zooms in a touch. The text below
                     stays as it is. */}
                 <div className="relative transition duration-300 ease-out group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:shadow-[12px_12px_0_#ff7eb6] group-focus-visible:-translate-x-2 group-focus-visible:-translate-y-2 group-focus-visible:shadow-[12px_12px_0_#ff7eb6] motion-reduce:transition-none">
-                  {project.slug === "500-asks" ? (
+                  {project.slug === "500-rejections" ? (
                     // The challenge's own live spiral, so the picture grows
                     // with every ask, on a pastel yellow.
                     <div className="flex aspect-[179/136] items-center justify-center overflow-hidden bg-[#fbefb4]">

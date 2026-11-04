@@ -6,7 +6,7 @@ import SiteHeader from "@/app/components/site-header";
 // shares the slim purple top, the lime page beneath it and the contact
 // footer (which hides itself on the contact page). A page can ask for
 // Adele's pastel yellow instead of the lime by marking its <main> with
-// data-yellow, as the more personal 500 asks challenge does.
+// data-yellow, as the more personal 500 rejections challenge does.
 export default function InnerLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-lime text-purple has-[main[data-yellow]]:bg-[#fbefb4]">
