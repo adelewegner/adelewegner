@@ -21,7 +21,7 @@ const DESCRIPTION =
   "Master's student at the IT University of Copenhagen with a passion for UX research, interaction design and creative data communication.";
 
 // The title, text and picture shown when the site is shared, e.g. on
-// LinkedIn. public/og-image.png is a magazine-like cover: "Adele" in a
+// LinkedIn. public/og-image.jpg is a magazine-like cover: "Adele" in a
 // large serif over a lime circle on cream, with "an online portfolio,
 // follow along", at 1200×627, the size LinkedIn and others expect.
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.jpg",
         width: 1200,
         height: 627,
         alt: "Adele Odderskov Wegner: an online portfolio, follow along",
